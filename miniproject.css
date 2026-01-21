@@ -1,0 +1,128 @@
+* {         /*aise hi start karte hai , jo pahale hume whole page pr same rakhna hai usse likh do*/ 
+    margin:0 ;
+    padding: 0; /*itna karke li ke bullets bhi gayab ho gaye*/
+    font-family: 'Poppins', sans-serif; 
+}
+
+.main_box {
+    background: url(camera.jpg);
+    height: 100vh;  /* search `give div height of complete page` */ 
+    background-size: cover;   /*isse poore eak image cover ho jayege */
+}
+
+.btn_one i {
+    color: white; /* pahake udhar html se delete krna padega */
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.sidebar_menu {
+    position: fixed;
+    left: -300px;    /*yee karne se sarra text screen se 600px left shift ho jayega*/
+   height: 100vh;      /* so side bar menu take complete height*/
+   width: 300px;
+   background-color: rgba(255, 255, 255, 0.1); /*ab white but transparent dikhega .1 krke */
+   box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);  /* white shadow bhi hoge*/
+   transition:all 0.2s linear;    /*ab ckecked hone pr side bar linearly open hoga */
+}
+
+.sidebar_menu .logo {    /*vo logo jo side bar menu me aate hai*/
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.5);
+    height: 60px;
+    
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500 ;
+}
+
+.sidebar_menu .btn_two i{
+    color: grey;
+    font-size: 25px;
+    line-height: 60px;
+    position: absolute;
+    left: 275px;
+    opacity: 0;
+   cursor: pointer; /*matlab apne curcer ko jab uss icon pr laye tn vo pointer ban jaye*/
+}
+
+.sidebar_menu .menu {
+    position: absolute;
+    width: 100%;  /*  matlab menu apne parent ke respect me ie side bar menu , 100%width occupy kr le */
+    top: 80px;
+}
+
+.sidebar_menu .menu li {
+    margin-top: 6px;
+    padding: 10px 20px ;
+}
+
+
+.sidebar_menu .menu i,a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar_menu .menu i {
+    padding-right: 8px;
+}
+
+.sidebar_menu .social_media {
+    position: absolute;
+    left: 25%;  /*parent ke relative 25% , agar fixed kiya hota toh top left corner ke resp me aata. */
+    bottom: 50px;
+}
+
+.sidebar_menu .social_media i {
+    color: white;
+    opacity: 0.5;
+    padding: 0 5px;
+}
+
+#check {
+    display: none;
+}
+
+.sidebar_menu .menu li:hover {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+ .btn_one i:hover {
+    font-size: 40px;
+ }
+
+ .btn_two i:hover {
+    font-size: 30px;
+ }
+
+ .sidebar_menu .social_media i:hover {
+    opacity: 1;
+    transform: scale(1.1);
+ }
+
+ #check:checked ~ .sidebar_menu{    /*#check me do button aate hai aur jaise hi button checked hoga tn iske simbling mtlb side bar menu pr yee change hoga */
+    left: 0;    /*cros wale pr click karke vo unchacked ho jayega aur sb purane state me chla jayga */ 
+ }
+
+ #check:checked ~ .btn_one i {  
+opacity: 0;
+ }
+
+ #check:checked ~ .sidebar_menu .btn_two i {    /*check ka sibling side bar hai aur side bar ka child btm 2 hai */
+    opacity: 1;
+ }
+   
+
+
